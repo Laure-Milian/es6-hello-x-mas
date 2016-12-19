@@ -1,0 +1,12 @@
+{
+  "name": "46_es6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "begin.es6.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.18.0"
+  }
+}

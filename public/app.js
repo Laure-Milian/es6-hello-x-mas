@@ -26,16 +26,35 @@
 	var capitalizeName = function capitalizeName(name) {
 		var goodName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
 		addToArray(goodName);
-		display(goodName);
 	};
 
 	var addToArray = function addToArray(goodName) {
 		namesArray.push(goodName);
+		display();
 	};
 
-	var display = function display(goodName) {
-		var newLine = document.createElement('li');
-		newLine.innerHTML = goodName;
-		listOfNames.appendChild(newLine);
+	var display = function display() {
+		listOfNames.innerHTML = '';
+		var len = namesArray.length;
+		for (var i = 0; i < len; i++) {
+			var newLine = document.createElement('li');
+			newLine.innerHTML = namesArray[i];
+			listOfNames.appendChild(newLine);
+		}
 	};
+
+	//Step 3
+	var inputSearch = document.getElementById('inputSearch');
+	var buttonSearch = document.getElementById('buttonSearch');
+
+	buttonSearch.addEventListener('click', function () {
+		if (inputSearch.value !== "") {
+			var search = inputSearch.value;
+			console.log(search);
+			var len = namesArray.length;
+			for (var i = 0; i < len; i++) {
+				console.log(namesArray[i]);
+			}
+		}
+	});
 })();

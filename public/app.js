@@ -6,19 +6,12 @@
 	var input = document.getElementById('input');
 	var output = document.getElementById('output');
 
-	button.addEventListener('click', function () {
-		var content = input.value;
+	button.addEventListener('click', function (event) {
+		var name = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "Père Noël";
+
 		if (input.value !== "") {
 			name = input.value;
-			hello(name);
-		} else {
-			hello();
 		}
-	});
-
-	var hello = function hello() {
-		var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'Père Noël';
-
 		output.innerHTML = 'Bonjour ' + name;
-	};
+	});
 })();

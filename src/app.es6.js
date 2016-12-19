@@ -1,9 +1,13 @@
 (() => {
 
 	let button = document.getElementById('button');
-	let input = document.getElementById('input')
-	console.log(button);
-	button.addEventListener('click', () => console.log("heyhey"));
-//	.on('click', () => {console.log("heyhey")});
+
+	button.addEventListener('click', () => {
+		let input = document.getElementById('input');
+		let output = document.getElementById('output');
+		let content = input.value;
+		console.log(content);
+		output.innerHTML = content;
+	});
 
 })();

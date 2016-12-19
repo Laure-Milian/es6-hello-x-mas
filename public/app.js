@@ -3,10 +3,12 @@
 (function () {
 
 	var button = document.getElementById('button');
-	var input = document.getElementById('input');
-	console.log(button);
+
 	button.addEventListener('click', function () {
-		return console.log("heyhey");
+		var input = document.getElementById('input');
+		var output = document.getElementById('output');
+		var content = input.value;
+		console.log(content);
+		output.innerHTML = content;
 	});
-	//	.on('click', () => {console.log("heyhey")});
 })();
